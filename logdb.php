@@ -1,5 +1,5 @@
 <?php
-include_once 'logconfig.php';
+include_once 'config.php';
 
 // Create connection
 $con = mysqli_connect($log_host, $log_username, $log_passwd, $log_dbname);
