@@ -37,3 +37,24 @@ function gethname($ip)
     }
 }
 
+    /**
+     * @param $log_host
+     * @param $log_username
+     * @param $log_passwd
+     * @param $log_dbname
+     *
+     * @return mysqli
+     */
+    function create_db_connections($log_host, $log_username, $log_passwd, $log_dbname)
+    {
+        // Create connection
+        $con = mysqli_connect($log_host, $log_username, $log_passwd, $log_dbname);
+
+        // Check connection
+        if (mysqli_connect_errno($con)) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        return $con;
+    }
+

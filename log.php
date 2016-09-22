@@ -1,5 +1,5 @@
 <?php
-include_once 'logdb.php';
+include_once 'config.php';
 
 $r = array();
 
